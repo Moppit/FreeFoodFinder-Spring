@@ -1,8 +1,5 @@
 package freefoodfinder;
 
-import javax.persistence.*;
-
-@Entity
 public class EventResponse {
 
     private Iterable<Event> events;

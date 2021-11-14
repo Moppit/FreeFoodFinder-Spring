@@ -16,7 +16,7 @@ public class Location {
     private Boolean InOrOutDoor;
 
     // Foreign Key
-    @OneToMany(mappedBy="location")
+    @OneToMany(mappedBy="locationID")
     private Set<Event> events;
 
     // Constructor

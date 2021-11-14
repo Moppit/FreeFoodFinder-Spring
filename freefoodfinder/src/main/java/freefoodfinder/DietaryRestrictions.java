@@ -20,7 +20,7 @@ public class DietaryRestrictions {
     private Boolean noSoy;
 
     // Foreign Key
-    @OneToMany(mappedBy="DietaryRestrictions")
+    @OneToMany(mappedBy="restrictionID")
     private Set<Event> events;
 
     // Getters & Setters
