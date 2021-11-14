@@ -1,21 +1,21 @@
-USE `mydb` ;
+USE `FreeFoodFinderDB` ;
 
 
-describe dietaryrestriction;
+describe dietary_restriction;
 describe location;
 
-#distary restriction table
-INSERT INTO dietaryrestriction 
+-- dietary restriction table
+INSERT INTO dietary_restriction
 VALUES
 	(0,1,1,0,1,0,0,0,1),
 	(1,1,0,0,0,0,1,0,2),
     (0,0,0,0,0,1,0,0,3);
-select * from dietaryrestriction;
+select * from dietary_restriction;
     
-#drop table dietaryrestriction;
-#DELETE FROM dietaryrestriction where restrictionID = 4;
+-- drop table dietary_restriction;
+-- DELETE FROM dietary_restriction where restrictionID = 4;
 
-#location table
+-- location table
 INSERT INTO location 
 VALUES
 	(1,"Engineering Center",20.5,30.2,0),
@@ -24,7 +24,7 @@ VALUES
 select * from location;
 
 
-#event table
+-- event table
 describe event;
 INSERT INTO event 
 VALUES

@@ -1,6 +1,7 @@
 package freefoodfinder;
 
 import java.sql.Timestamp;
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import javax.persistence.*;
 
 @Entity
@@ -16,16 +17,19 @@ public class Event {
     private String roomNumber;
 
     // Foreign Keys
+    @JsonBackReference
     @ManyToOne
     @JoinColumn(name="restrictionID", nullable = false)
-    private DietaryRestrictions restrictionID;
+    private DietaryRestriction restrictionID;
 
+    @JsonBackReference
     @ManyToOne
     @JoinColumn(name="locationID", nullable = false)
     private Location locationID;
 
-    // Constructor
-    public Event(Integer eventID, String foodName, Timestamp availableUntil, String foodDescription, String roomNumber, DietaryRestrictions restrictionID, Location locationID) {
+    // Constructors
+    public Event() {}
+    public Event(Integer eventID, String foodName, Timestamp availableUntil, String foodDescription, String roomNumber, DietaryRestriction restrictionID, Location locationID) {
         this.eventID = eventID;
         this.foodName = foodName;
         this.availableUntil = availableUntil;
@@ -76,11 +80,11 @@ public class Event {
         this.roomNumber = roomNumber;
     }
 
-    public DietaryRestrictions getRestrictionID() {
+    public DietaryRestriction getRestrictionID() {
         return restrictionID;
     }
 
-    public void setRestrictionID(DietaryRestrictions restrictionID) {
+    public void setRestrictionID(DietaryRestriction restrictionID) {
         this.restrictionID = restrictionID;
     }
 

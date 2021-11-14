@@ -1,6 +1,7 @@
 package freefoodfinder;
 
 import java.util.Set;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import javax.persistence.*;
 
 @Entity
@@ -16,10 +17,12 @@ public class Location {
     private Boolean InOrOutDoor;
 
     // Foreign Key
+    @JsonManagedReference
     @OneToMany(mappedBy="locationID")
     private Set<Event> events;
 
-    // Constructor
+    // Constructors
+    public Location() {}
     public Location(Integer locationID, String locationName, String latitude, String longitude, Boolean inOrOutDoor, Set<Event> events) {
         this.locationID = locationID;
         this.locationName = locationName;

@@ -1,10 +1,11 @@
 package freefoodfinder;
 
 import java.util.Set;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import javax.persistence.*;
 
 @Entity
-public class DietaryRestrictions {
+public class DietaryRestriction {
 
     // Table Columns
     @Id
@@ -20,8 +21,24 @@ public class DietaryRestrictions {
     private Boolean noSoy;
 
     // Foreign Key
+    @JsonManagedReference
     @OneToMany(mappedBy="restrictionID")
     private Set<Event> events;
+
+    // Constructors
+    public DietaryRestriction() {}
+    public DietaryRestriction(Integer restrictionID, Boolean glutenFree, Boolean vegan, Boolean vegetarian, Boolean noPeanut, Boolean lactoseFree, Boolean kosher, Boolean noEgg, Boolean noSoy, Set<Event> events) {
+        this.restrictionID = restrictionID;
+        this.glutenFree = glutenFree;
+        this.vegan = vegan;
+        this.vegetarian = vegetarian;
+        this.noPeanut = noPeanut;
+        this.lactoseFree = lactoseFree;
+        this.kosher = kosher;
+        this.noEgg = noEgg;
+        this.noSoy = noSoy;
+        this.events = events;
+    }
 
     // Getters & Setters
     public Integer getRestrictionID() {
