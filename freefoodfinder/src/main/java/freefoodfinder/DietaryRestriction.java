@@ -1,7 +1,7 @@
 package freefoodfinder;
 
 import java.util.Set;
-import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import javax.persistence.*;
 
 @Entity
@@ -21,7 +21,7 @@ public class DietaryRestriction {
     private Boolean noSoy;
 
     // Foreign Key
-    @JsonManagedReference
+    @JsonBackReference
     @OneToMany(mappedBy="restrictionID")
     private Set<Event> events;
 

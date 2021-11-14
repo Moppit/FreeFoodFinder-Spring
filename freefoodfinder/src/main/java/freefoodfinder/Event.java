@@ -1,7 +1,7 @@
 package freefoodfinder;
 
 import java.sql.Timestamp;
-import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import javax.persistence.*;
 
 @Entity
@@ -17,12 +17,12 @@ public class Event {
     private String roomNumber;
 
     // Foreign Keys
-    @JsonBackReference
+    @JsonManagedReference
     @ManyToOne
     @JoinColumn(name="restrictionID", nullable = false)
     private DietaryRestriction restrictionID;
 
-    @JsonBackReference
+    @JsonManagedReference
     @ManyToOne
     @JoinColumn(name="locationID", nullable = false)
     private Location locationID;
