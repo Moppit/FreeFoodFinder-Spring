@@ -1,20 +1,18 @@
 package freefoodfinder;
 
-import java.util.Set;
-
 public class LocationResponse {
 
-    private Set<Location> locations;
+    private Iterable<Location> locations;
 
-    public LocationResponse(Set<Location> locations) {
+    public LocationResponse(Iterable<Location> locations) {
         this.locations = locations;
     }
 
-    public Set<Location> getLocations() {
+    public Iterable<Location> getLocations() {
         return locations;
     }
 
-    public void setLocations(Set<Location> locations) {
+    public void setLocations(Iterable<Location> locations) {
         this.locations = locations;
     }
 

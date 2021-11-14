@@ -1,22 +1,21 @@
 package freefoodfinder;
 
-import java.util.Set;
 import javax.persistence.*;
 
 @Entity
 public class EventResponse {
 
-    private Set<Event> events;
+    private Iterable<Event> events;
 
-    public EventResponse(Set<Event> events) {
+    public EventResponse(Iterable<Event> events) {
         this.events = events;
     }
 
-    public Set<Event> getEvents() {
+    public Iterable<Event> getEvents() {
         return events;
     }
 
-    public void setEvents(Set<Event> events) {
+    public void setEvents(Iterable<Event> events) {
         this.events = events;
     }
 
