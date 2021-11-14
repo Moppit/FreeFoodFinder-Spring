@@ -1,4 +1,4 @@
-#FreeFoodFinder-Spring
+# FreeFoodFinder-Spring
 
 ## Run the Project
 You must run the project as a Maven project. In the `freefoodfinder` directory, run the command:
