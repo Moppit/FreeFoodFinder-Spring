@@ -1,5 +1,12 @@
 # FreeFoodFinder-Spring
 
+## Deliverables
+
+### Project 6
+Our written deliverables is saved in this repo as `Project 6 Update.pdf` in the root directory.
+
+Our code is separated into 2 repositories for ease of development. This project contains the Spring half. To access the Angular side of the project, visit https://github.com/Moppit/FreeFoodFinder-Angular. 
+
 ## Run the Project
 You must run the project as a Maven project. In the `freefoodfinder` directory, run the command:
 ```bash
