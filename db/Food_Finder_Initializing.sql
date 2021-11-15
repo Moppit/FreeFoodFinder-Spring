@@ -8,82 +8,82 @@ SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
 
 -- -----------------------------------------------------
--- Schema mydb
+-- Schema FreeFoodFinderDB
 -- -----------------------------------------------------
 
 -- -----------------------------------------------------
--- Schema mydb
+-- Schema FreeFoodFinderDB
 -- -----------------------------------------------------
-CREATE SCHEMA IF NOT EXISTS `mydb` DEFAULT CHARACTER SET utf8 ;
-USE `mydb` ;
+CREATE SCHEMA IF NOT EXISTS `FreeFoodFinderDB` DEFAULT CHARACTER SET utf8 ;
+USE `FreeFoodFinderDB` ;
 
 -- -----------------------------------------------------
--- Table `mydb`.`DietaryRestriction`
+-- Table `FreeFoodFinderDB`.`dietary_restriction`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `mydb`.`DietaryRestriction` ;
+DROP TABLE IF EXISTS `FreeFoodFinderDB`.`dietary_restriction` ;
 
-CREATE TABLE IF NOT EXISTS `mydb`.`DietaryRestriction` (
-  `glutenFree` TINYINT NOT NULL,
+CREATE TABLE IF NOT EXISTS `FreeFoodFinderDB`.`dietary_restriction` (
+  `gluten_free` TINYINT NOT NULL,
   `vegan` TINYINT NOT NULL,
   `vegetarian` TINYINT NOT NULL,
-  `noPeanut` TINYINT NOT NULL,
-  `lactoseFree` TINYINT NOT NULL,
+  `no_peanut` TINYINT NOT NULL,
+  `lactose_free` TINYINT NOT NULL,
   `kosher` TINYINT NOT NULL,
-  `noEgg` TINYINT NOT NULL,
-  `noSoy` TINYINT NOT NULL,
+  `no_egg` TINYINT NOT NULL,
+  `no_soy` TINYINT NOT NULL,
   `restrictionID` INT NOT NULL AUTO_INCREMENT,
   PRIMARY KEY (`restrictionID`))
 ENGINE = InnoDB;
 
-CREATE UNIQUE INDEX `restrictionID_UNIQUE` ON `mydb`.`DietaryRestriction` (`restrictionID` ASC) VISIBLE;
+CREATE UNIQUE INDEX `restrictionID_UNIQUE` ON `FreeFoodFinderDB`.`dietary_restriction` (`restrictionID` ASC) VISIBLE;
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`location`
+-- Table `FreeFoodFinderDB`.`location`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `mydb`.`location` ;
+DROP TABLE IF EXISTS `FreeFoodFinderDB`.`location` ;
 
-CREATE TABLE IF NOT EXISTS `mydb`.`location` (
+CREATE TABLE IF NOT EXISTS `FreeFoodFinderDB`.`location` (
   `locationID` INT NOT NULL,
-  `locationName` VARCHAR(45) NOT NULL,
-  `latitude` DECIMAL(10,2) NOT NULL,
-  `longtitude` DECIMAL(10,2) NOT NULL,
-  `InOrOutDoor` TINYINT NOT NULL,
+  `location_name` VARCHAR(45) NOT NULL,
+  `latitude` DECIMAL(10,5) NOT NULL,
+  `longitude` DECIMAL(10,5) NOT NULL,
+  `is_outdoor` TINYINT NOT NULL,
   PRIMARY KEY (`locationID`))
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`event`
+-- Table `FreeFoodFinderDB`.`event`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `mydb`.`event` ;
+DROP TABLE IF EXISTS `FreeFoodFinderDB`.`event` ;
 
-CREATE TABLE IF NOT EXISTS `mydb`.`event` (
+CREATE TABLE IF NOT EXISTS `FreeFoodFinderDB`.`event` (
   `eventID` INT NOT NULL AUTO_INCREMENT,
-  `foodName` VARCHAR(45) NOT NULL,
-  `availableUntil` DATETIME NOT NULL,
-  `foodDescription` VARCHAR(250) NOT NULL,
-  `roomNumber` VARCHAR(45) NULL,
+  `food_name` VARCHAR(45) NOT NULL,
+  `available_until` DATETIME NOT NULL,
+  `food_description` VARCHAR(250) NOT NULL,
+  `room_number` VARCHAR(45) NULL,
   `restrictionID` INT NOT NULL,
   `locationID` INT NOT NULL,
   PRIMARY KEY (`eventID`),
-  CONSTRAINT `fk_event_DietaryRestriction`
+  CONSTRAINT `fk_event_dietary_restriction`
     FOREIGN KEY (`restrictionID`)
-    REFERENCES `mydb`.`DietaryRestriction` (`restrictionID`)
+    REFERENCES `FreeFoodFinderDB`.`dietary_restriction` (`restrictionID`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_event_location1`
     FOREIGN KEY (`locationID`)
-    REFERENCES `mydb`.`location` (`locationID`)
+    REFERENCES `FreeFoodFinderDB`.`location` (`locationID`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
-CREATE UNIQUE INDEX `eventID_UNIQUE` ON `mydb`.`event` (`eventID` ASC) VISIBLE;
+CREATE UNIQUE INDEX `eventID_UNIQUE` ON `FreeFoodFinderDB`.`event` (`eventID` ASC) VISIBLE;
 
-CREATE INDEX `fk_event_DietaryRestriction_idx` ON `mydb`.`event` (`restrictionID` ASC) VISIBLE;
+CREATE INDEX `fk_event_dietary_restriction_idx` ON `FreeFoodFinderDB`.`event` (`restrictionID` ASC) VISIBLE;
 
-CREATE INDEX `fk_event_location1_idx` ON `mydb`.`event` (`locationID` ASC) VISIBLE;
+CREATE INDEX `fk_event_location1_idx` ON `FreeFoodFinderDB`.`event` (`locationID` ASC) VISIBLE;
 
 
 SET SQL_MODE=@OLD_SQL_MODE;
