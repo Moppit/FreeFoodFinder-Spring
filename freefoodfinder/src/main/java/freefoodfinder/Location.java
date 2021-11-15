@@ -12,9 +12,9 @@ public class Location {
     @GeneratedValue(strategy=GenerationType.AUTO)
     private Integer locationID;
     private String locationName;
-    private String latitude;
-    private String longitude;
-    private Boolean InOrOutDoor;
+    private Float latitude;
+    private Float longitude;
+    private Boolean isOutdoor;
 
     // Foreign Key
     @JsonBackReference
@@ -23,12 +23,12 @@ public class Location {
 
     // Constructors
     public Location() {}
-    public Location(Integer locationID, String locationName, String latitude, String longitude, Boolean inOrOutDoor, Set<Event> events) {
+    public Location(Integer locationID, String locationName, Float latitude, Float longitude, Boolean isOutdoor, Set<Event> events) {
         this.locationID = locationID;
         this.locationName = locationName;
         this.latitude = latitude;
         this.longitude = longitude;
-        this.InOrOutDoor = inOrOutDoor;
+        this.isOutdoor = isOutdoor;
         this.events = events;
     }
 
@@ -49,28 +49,28 @@ public class Location {
         this.locationName = locationName;
     }
 
-    public String getLatitude() {
+    public Float getLatitude() {
         return latitude;
     }
 
-    public void setLatitude(String latitude) {
+    public void setLatitude(Float latitude) {
         this.latitude = latitude;
     }
 
-    public String getLongitude() {
+    public Float getLongitude() {
         return longitude;
     }
 
-    public void setLongitude(String longitude) {
+    public void setLongitude(Float longitude) {
         this.longitude = longitude;
     }
 
-    public Boolean getInOrOutDoor() {
-        return InOrOutDoor;
+    public Boolean getIsOutdoor() {
+        return isOutdoor;
     }
 
-    public void setInOrOutDoor(Boolean inOrOutDoor) {
-        InOrOutDoor = inOrOutDoor;
+    public void setIsOutdoor(Boolean isOutdoor) {
+        this.isOutdoor = isOutdoor;
     }
 
     public Set<Event> getEvents() {

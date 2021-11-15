@@ -48,9 +48,9 @@ Example output (assuming only 1 events in the database):
     "locationID": {
       "locationID":1,
       "locationName":"Engineering Center",
-      "latitude":"20.50",
-      "longitude":"30.20",
-      "inOrOutDoor":false
+      "latitude":20.5,
+      "longitude":30.2,
+      "isOutdoor":false
     }
   }]
 }
