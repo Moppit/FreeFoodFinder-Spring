@@ -18,6 +18,25 @@ All SQL files are located in the `db` directory.
 - Database schema specifications are outlined in `Food_Finder_Initializing.sql`.
 - Mock data is provided in `Food_Finding_Mock_Data.sql`
 
+### Connecting to a Local DB Server
+Setting up the database is modeled after this tutorial: https://spring.io/guides/gs/accessing-data-mysql/.
+
+For our specific server:
+
+1. Install MySQL/the `mysql` CLI. 
+2. Generate the database based on our DDL, `Food_Finder_Initializing.sql`.
+   1. Sign in as root to MySQL with `sudo mysql --password`
+   2. Create a new database named `FreeFoodFinderDB` using `create database FreeFoodFinderDB;`
+   3. Create a new user for Spring to access the DB.
+      1. Create with `create user 'springuser'@'%' identified by 'CSCI5448';`
+      2. Decide privileges with `grant all on FreeFoodFinderDB.* to 'springuser'@'%';`
+   4. Load the DDL with `source /{ABSOLUTE PATH}/Food_Finder_Initializing.sql`
+3. Configure your Spring project to load this new DDL.
+   1. Navigate to `freefoodfinder/src/main/resources/application.properties`.
+   2. Change the first line (`spring.jpa.hibernate.ddl-auto=none`) to `spring.jpa.hibernate.ddl-auto=update`.
+   3. Note for posterity: after your first run (which needs to create the hiberate table), you should change the `ddl-auto` attribute back to `none` if you don't intend for any more structural changes to the database.
+4. Now you should be able to run the project (using `./mvnw spring-boot:run` as described above) and curl `localhost` to retrieve data.
+
 ## Endpoints
 
 ### /fff/events
