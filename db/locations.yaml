@@ -1,0 +1,157 @@
+locations:
+  - name: Engineering Center
+    lat: 40.007229
+    lon: -105.262077
+    outdoor: FALSE
+  - name: Mathematics Building
+    lat: 39.981190
+    lon: -105.249470
+    outdoor: FALSE
+  - name: University Memorial Center (UMC)
+    lat: 40.007092
+    lon: -105.272057
+    outdoor: FALSE
+  - name: Center for Community (C4C)
+    lat: 40.004790
+    lon: -105.265060
+    outdoor: FALSE
+  - name: Farrand Field
+    lat: 40.0010718
+    lon: -105.2713142
+    outdoor: TRUE
+
+#    Armory
+#    Arts and Sciences Finance and Payroll Administration
+#    Arts and Sciences Office Building 1
+#    ATLAS Building, Roser (Alliance for Technology, Learning, and Society)
+#    Benson Earth Sciences Building
+#    Biotechnology Building, Jennie Smoly Caruthers
+#    Bruce Curtis Building (Museum Collections)
+#    Carlson Gymnasium
+#    Center for Asian Studies
+#    Center for Astrophysics and Space Astronomy
+#    Center for Community
+#    Charlotte York Irey Theatre (in University Theatre Building)
+#    Children’s Center
+#    CIRES (Cooperative Institute for Research in Environmental Sciences)
+#    Clare Small Arts and Sciences
+#    Computing Center
+#    Continuing Education Center
+#    Cristol Chemistry and Biochemistry Building
+#    CU Events Center
+#    Dal Ward Athletic Center
+#    Denison Arts and Sciences Building
+#    Discovery Learning Center
+#    Duane D-Wing
+#    Duane Physical Laboratories (includes Duane Physics, Duane D-Wing, Gamow Tower, and JILA)
+#    Duane Physics
+#    Eaton Humanities Building
+#    Economics Building
+#    Education Building
+#    Ekeley Sciences Building
+#    Engineering Center
+#    Environmental Design Building
+#    Environmental Health and Safety Center
+#    Euclid Avenue AutoPark
+#    Fiske Planetarium and Science Center
+#    Fleming Building
+#    Folsom Field
+#    Gamow Tower (in Duane Physical Laboratories)
+#    Gates Woodruff Women’s Studies Cottage
+#    Gold Biosciences Building (MCD Biology)
+#    Grounds and Service Center
+#    Guggenheim Geography Building
+#    Hale Science Building
+#    Health Physics Laboratory
+#    Hellems Arts and Sciences Building (includes Mary Rippon Outdoor Theatre)
+#    Henderson Building (Museum of Natural History)
+#    Housing & Dining Services Facilities Operations Center
+#    Housing System Service Center
+#    Imig Music Building
+#    Institute for Behavioral Genetics
+#    Institute of Behavioral Science
+#    Integrated Teaching and Learning Laboratory
+#    International English Center
+#    Jennie Smoly Caruthers Biotechnology Building
+#    JILA
+#    Ketchum Arts and Sciences Building
+#    Koelbel Building (Leeds School of Business)
+#    Koenig Alumni Center
+#    LASP Space Technology Research Center
+#    Lesser House
+#    Life Science Research Laboratory, RL4
+#    Life Sciences Laboratories Complex (includes Gold Biosciences, Muenzinger Psychology, Porter Biosciences, and Ramaley Biology)
+#    MacAllister Research Center
+#    Macky Auditorium
+#    Marine Street Science Center, Research Laboratory, RL6
+#    Mary Rippon Outdoor Theatre (at Hellems Arts and Sciences)
+#    Mathematics Building
+#    McKenna Languages Building
+#    Muenzinger Psychology and Biopsychology
+#    Norlin Library
+#    Old Main
+#    Page Foundation Center
+#    Police and Parking Services
+#    Porter Biosciences
+#    Power House
+#    Ramaley Biology Building
+#    Regent Administrative Center
+#    Regent Drive AutoPark
+#    Research Laboratory, RL2
+#    Research Park Greenhouse
+#    Rose Litman Research Laboratory, RL1
+#    Roser ATLAS Building
+#    Science Learning Laboratory
+#    Sommers-Bausch Observatory
+#    Space Science Building
+#    Speech, Language and Hearing Sciences Building
+#    Stadium Building
+#    Stadium Ticket Building
+#    Student Recreation Center
+#    Technology Learning Center
+#    Transportation Center
+#    University Administrative Center
+#    University Club
+#    University Memorial Center
+#    University Theatre Building (includes Charlotte York Irey Theatre)
+#    Visual Arts Complex
+#    Wardenburg Health Center
+#    Wolf Law Building
+#    Woodbury Arts and Sciences
+#
+#CU Boulder Housing
+#
+#    Aden Hall (Engineering Quad)
+#    Andrews Hall (Kittredge Complex)
+#    Arnett Hall (Kittredge Complex)
+#    Athens Court
+#    Athens North Hall
+#    Baker Hall
+#    Bear Creek Apartments
+#    Bear Creek Commons
+#    Brackett Hall (Engineering Quad)
+#    Buckingham Hall (Kittredge Complex)
+#    Cheyenne Arapaho Hall
+#    Cockerell Hall (Engineering Quad)
+#    Crosman Hall (Engineering Quad)
+#    Darley Commons (Williams Village)
+#    Darley Towers (Williams Village)
+#    Engineering Quad (includes Aden, Brackett, Cockerell, and Crosman Halls)
+#    Faculty Staff Court
+#    Farrand Hall
+#    Hallett Hall
+#    Kittredge Complex (includes Andrews, Arnett, Buckingham, Kittredge Central, Kittredge West, and Smith
+#    Halls)
+#    Kittredge Central Hall (Kittredge Complex)
+#    Kittredge West Hall (Kittredge Complex)
+#    Libby Hall
+#    Marine Court
+#    Newton Court
+#    Reed Hall
+#    Sewall Hall
+#    Smiley Court
+#    Smith Hall (Kittredge Complex)
+#    Stearns Towers (Williams Village)
+#    Willard Hall
+#    Williams Village (includes Darley Commons, Darley Towers, Stearns Towers, and Williams Village North Hall)
+#    Williams Village North Hall (Williams Village)
