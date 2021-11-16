@@ -31,7 +31,6 @@ INSERT INTO location VALUES
     (DEFAULT, "Hellems Arts And Sciences Bldg", 40.0074564644168, -105.272757728361, "1550 Central Campus Mall", False),
     (DEFAULT, "Denison Arts And Sciences Bldg", 40.0069385939878, -105.273381352991, "1080 Broadway", False),
     (DEFAULT, "Henderson Bldg (Museum)", 40.0069022872529, -105.272753301243, "1030 Broadway", False),
-    (DEFAULT, "Ekeley Sciences Bldg", , , "1601 Central Campus Mall", False),
     (DEFAULT, "University Residence", 39.9959978033539, -105.247454137436, "3600 Caddo Pkwy", False),
     (DEFAULT, "Williams Village Recreation Center", 39.9981488962338, -105.251386119623, "3225 Apache Dr", False),
     (DEFAULT, "Bear Creek Apt B", 39.9967630365016, -105.249726238009, "3355 Apache Dr", False),

@@ -19,5 +19,6 @@ if __name__ == "__main__":
 
         # Write inserts
         for i, loc in enumerate(data_loaded['locations']):
-            stream.write('    (DEFAULT, "{}", {}, {}, {}, {})'.format(loc['name'], loc['lat'], loc['lon'], "NULL" if loc.get('address') is None else '"{}"'.format(loc['address']), loc['outdoor']))
-            stream.write(";" if i == len(data_loaded['locations']) - 1 else ",\n")
+            if loc['lat'] is not None and loc['lat'] != '': # Not all rows have lat lon, so we skip
+                    stream.write('    (DEFAULT, "{}", {}, {}, {}, {})'.format(loc['name'], loc['lat'], loc['lon'], "NULL" if loc.get('address') is None else '"{}"'.format(loc['address']), loc['outdoor']))
+                    stream.write(";" if i == len(data_loaded['locations']) - 1 else ",\n")
