@@ -18,9 +18,9 @@ select * from dietary_restriction;
 -- location table
 INSERT INTO location 
 VALUES
-	(1,"Engineering Center",20.5,30.2,0),
-	(2,"Math Building",19.3,30.2,0),
-    (3,"Outside of Math Building",20,30,1);
+	(1,"Engineering Center",20.5,30.2,"1111 Engineering Drive",0),
+	(2,"Math Building",19.3,30.2,"2300 Colorado Avenue",0),
+    (3,"Outside of Math Building",20,30,NULL,1);
 select * from location;
 
 

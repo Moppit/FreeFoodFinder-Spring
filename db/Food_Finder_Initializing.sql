@@ -48,6 +48,7 @@ CREATE TABLE IF NOT EXISTS `FreeFoodFinderDB`.`location` (
   `location_name` VARCHAR(45) NOT NULL,
   `latitude` DECIMAL(10,5) NOT NULL,
   `longitude` DECIMAL(10,5) NOT NULL,
+  `address` VARCHAR(100),
   `is_outdoor` TINYINT NOT NULL,
   PRIMARY KEY (`locationID`))
 ENGINE = InnoDB;

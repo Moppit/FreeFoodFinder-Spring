@@ -14,6 +14,7 @@ public class Location {
     private String locationName;
     private Float latitude;
     private Float longitude;
+    private String address;
     private Boolean isOutdoor;
 
     // Foreign Key
@@ -23,11 +24,12 @@ public class Location {
 
     // Constructors
     public Location() {}
-    public Location(Integer locationID, String locationName, Float latitude, Float longitude, Boolean isOutdoor, Set<Event> events) {
+    public Location(Integer locationID, String locationName, Float latitude, Float longitude, String address, Boolean isOutdoor, Set<Event> events) {
         this.locationID = locationID;
         this.locationName = locationName;
         this.latitude = latitude;
         this.longitude = longitude;
+        this.address = address;
         this.isOutdoor = isOutdoor;
         this.events = events;
     }
@@ -63,6 +65,14 @@ public class Location {
 
     public void setLongitude(Float longitude) {
         this.longitude = longitude;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String longitude) {
+        this.address = address;
     }
 
     public Boolean getIsOutdoor() {

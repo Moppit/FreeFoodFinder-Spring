@@ -86,3 +86,47 @@ Example output (assuming only 1 events in the database):
   }]
 }
 ```
+
+### /fff/locations
+This retrieves all locations from the database.
+
+`@param` None
+
+`@return` List of Location Objects
+
+Example Query
+```bash
+curl 'localhost:8080/fff/locations'
+```
+
+Example output (assuming only 3 locations in the database):
+```json
+{
+   "locations": [
+      {
+         "locationID":1,
+         "locationName":"Engineering Center",
+         "latitude":20.5,
+         "longitude":30.2,
+         "address":"1111 Engineering Drive",
+         "isOutdoor":false
+      },
+      {
+         "locationID":2,
+         "locationName":"Math Building",
+         "latitude":19.3,
+         "longitude":30.2,
+         "address":"2300 Colorado Avenue",
+         "isOutdoor":false
+      },
+      {
+         "locationID":3,
+         "locationName":"Outside of Math Building",
+         "latitude":20.0,
+         "longitude":30.0,
+         "address":null,
+         "isOutdoor":true
+      }
+   ]
+}
+```
