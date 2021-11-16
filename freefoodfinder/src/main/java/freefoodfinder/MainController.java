@@ -20,4 +20,10 @@ public class MainController {
         return this.service.getAllEvents();
     }
 
+    @CrossOrigin
+    @GetMapping("/locations")
+    public @ResponseBody LocationResponse getLocations() {
+        return this.service.getLocations();
+    }
+
 }
