@@ -1,157 +1,535 @@
 locations:
-  - name: Engineering Center
-    lat: 40.007229
-    lon: -105.262077
-    outdoor: FALSE
-  - name: Mathematics Building
-    lat: 39.981190
-    lon: -105.249470
-    outdoor: FALSE
-  - name: University Memorial Center (UMC)
-    lat: 40.007092
-    lon: -105.272057
-    outdoor: FALSE
-  - name: Center for Community (C4C)
-    lat: 40.004790
-    lon: -105.265060
-    outdoor: FALSE
-  - name: Farrand Field
-    lat: 40.0010718
-    lon: -105.2713142
-    outdoor: TRUE
-
-#    Armory
-#    Arts and Sciences Finance and Payroll Administration
-#    Arts and Sciences Office Building 1
-#    ATLAS Building, Roser (Alliance for Technology, Learning, and Society)
-#    Benson Earth Sciences Building
-#    Biotechnology Building, Jennie Smoly Caruthers
-#    Bruce Curtis Building (Museum Collections)
-#    Carlson Gymnasium
-#    Center for Asian Studies
-#    Center for Astrophysics and Space Astronomy
-#    Center for Community
-#    Charlotte York Irey Theatre (in University Theatre Building)
-#    Children’s Center
-#    CIRES (Cooperative Institute for Research in Environmental Sciences)
-#    Clare Small Arts and Sciences
-#    Computing Center
-#    Continuing Education Center
-#    Cristol Chemistry and Biochemistry Building
-#    CU Events Center
-#    Dal Ward Athletic Center
-#    Denison Arts and Sciences Building
-#    Discovery Learning Center
-#    Duane D-Wing
-#    Duane Physical Laboratories (includes Duane Physics, Duane D-Wing, Gamow Tower, and JILA)
-#    Duane Physics
-#    Eaton Humanities Building
-#    Economics Building
-#    Education Building
-#    Ekeley Sciences Building
-#    Engineering Center
-#    Environmental Design Building
-#    Environmental Health and Safety Center
-#    Euclid Avenue AutoPark
-#    Fiske Planetarium and Science Center
-#    Fleming Building
-#    Folsom Field
-#    Gamow Tower (in Duane Physical Laboratories)
-#    Gates Woodruff Women’s Studies Cottage
-#    Gold Biosciences Building (MCD Biology)
-#    Grounds and Service Center
-#    Guggenheim Geography Building
-#    Hale Science Building
-#    Health Physics Laboratory
-#    Hellems Arts and Sciences Building (includes Mary Rippon Outdoor Theatre)
-#    Henderson Building (Museum of Natural History)
-#    Housing & Dining Services Facilities Operations Center
-#    Housing System Service Center
-#    Imig Music Building
-#    Institute for Behavioral Genetics
-#    Institute of Behavioral Science
-#    Integrated Teaching and Learning Laboratory
-#    International English Center
-#    Jennie Smoly Caruthers Biotechnology Building
-#    JILA
-#    Ketchum Arts and Sciences Building
-#    Koelbel Building (Leeds School of Business)
-#    Koenig Alumni Center
-#    LASP Space Technology Research Center
-#    Lesser House
-#    Life Science Research Laboratory, RL4
-#    Life Sciences Laboratories Complex (includes Gold Biosciences, Muenzinger Psychology, Porter Biosciences, and Ramaley Biology)
-#    MacAllister Research Center
-#    Macky Auditorium
-#    Marine Street Science Center, Research Laboratory, RL6
-#    Mary Rippon Outdoor Theatre (at Hellems Arts and Sciences)
-#    Mathematics Building
-#    McKenna Languages Building
-#    Muenzinger Psychology and Biopsychology
-#    Norlin Library
-#    Old Main
-#    Page Foundation Center
-#    Police and Parking Services
-#    Porter Biosciences
-#    Power House
-#    Ramaley Biology Building
-#    Regent Administrative Center
-#    Regent Drive AutoPark
-#    Research Laboratory, RL2
-#    Research Park Greenhouse
-#    Rose Litman Research Laboratory, RL1
-#    Roser ATLAS Building
-#    Science Learning Laboratory
-#    Sommers-Bausch Observatory
-#    Space Science Building
-#    Speech, Language and Hearing Sciences Building
-#    Stadium Building
-#    Stadium Ticket Building
-#    Student Recreation Center
-#    Technology Learning Center
-#    Transportation Center
-#    University Administrative Center
-#    University Club
-#    University Memorial Center
-#    University Theatre Building (includes Charlotte York Irey Theatre)
-#    Visual Arts Complex
-#    Wardenburg Health Center
-#    Wolf Law Building
-#    Woodbury Arts and Sciences
-#
-#CU Boulder Housing
-#
-#    Aden Hall (Engineering Quad)
-#    Andrews Hall (Kittredge Complex)
-#    Arnett Hall (Kittredge Complex)
-#    Athens Court
-#    Athens North Hall
-#    Baker Hall
-#    Bear Creek Apartments
-#    Bear Creek Commons
-#    Brackett Hall (Engineering Quad)
-#    Buckingham Hall (Kittredge Complex)
-#    Cheyenne Arapaho Hall
-#    Cockerell Hall (Engineering Quad)
-#    Crosman Hall (Engineering Quad)
-#    Darley Commons (Williams Village)
-#    Darley Towers (Williams Village)
-#    Engineering Quad (includes Aden, Brackett, Cockerell, and Crosman Halls)
-#    Faculty Staff Court
-#    Farrand Hall
-#    Hallett Hall
-#    Kittredge Complex (includes Andrews, Arnett, Buckingham, Kittredge Central, Kittredge West, and Smith
-#    Halls)
-#    Kittredge Central Hall (Kittredge Complex)
-#    Kittredge West Hall (Kittredge Complex)
-#    Libby Hall
-#    Marine Court
-#    Newton Court
-#    Reed Hall
-#    Sewall Hall
-#    Smiley Court
-#    Smith Hall (Kittredge Complex)
-#    Stearns Towers (Williams Village)
-#    Willard Hall
-#    Williams Village (includes Darley Commons, Darley Towers, Stearns Towers, and Williams Village North Hall)
-#    Williams Village North Hall (Williams Village)
+  - address: 3300 Marine St
+    lat: '40.0128521104985'
+    lon: '-105.251165150818'
+    name: Warehouse No 4
+    outdoor: false
+  - address: 3300 Marine St
+    lat: '40.0127146724491'
+    lon: '-105.251165205783'
+    name: Warehouse No 3
+    outdoor: false
+  - address: 3300 Marine St
+    lat: '40.0126455338225'
+    lon: '-105.251164788807'
+    name: Warehouse No 2
+    outdoor: false
+  - address: 3300 Marine St
+    lat: '40.0125077511607'
+    lon: '-105.251164167041'
+    name: Warehouse No 1
+    outdoor: false
+  - address: 1520 30Th St
+    lat: '40.0121178479861'
+    lon: '-105.252833606079'
+    name: Life Sci Research Lab (Rl-4)
+    outdoor: false
+  - address: 1540 30Th St
+    lat: '40.0125906757789'
+    lon: '-105.253025033826'
+    name: Research Lab No 2
+    outdoor: false
+  - address: 1560 30Th St
+    lat: '40.0132085573053'
+    lon: '-105.253003671052'
+    name: Litman Research Lab (Rl-1)
+    outdoor: false
+  - address: 1257 38Th St
+    lat: '40.0088980041241'
+    lon: '-105.24651343939'
+    name: Rsch Park Pump Station
+    outdoor: false
+  - address: 3625 Discovery Dr
+    lat: '40.0096461473572'
+    lon: '-105.248339021696'
+    name: Potts Field Track Storage
+    outdoor: false
+  - address: 1300 30Th St
+    lat: '40.0080015660637'
+    lon: '-105.252246976835'
+    name: Smiley Ct B1
+    outdoor: false
+  - address: 1300 30Th St
+    lat: '40.008241782636'
+    lon: '-105.252329211603'
+    name: Smiley Ct L1
+    outdoor: false
+  - address: 1300 30Th St
+    lat: '40.0098275770821'
+    lon: '-105.252107859525'
+    name: Smiley Ct L3
+    outdoor: false
+  - address: 1300 30Th St
+    lat: '40.0083726396026'
+    lon: '-105.251968557992'
+    name: Smiley Ct B2
+    outdoor: false
+  - address: 1300 30Th St
+    lat: '40.0081304993194'
+    lon: '-105.25263325449'
+    name: Smiley Ct D5
+    outdoor: false
+  - address: 1300 30Th St
+    lat: '40.0079845012662'
+    lon: '-105.252968355474'
+    name: Smiley Ct A1
+    outdoor: false
+  - address: 1300 30Th St
+    lat: '40.0077282401777'
+    lon: '-105.252023263268'
+    name: Smiley Ct D9
+    outdoor: false
+  - address: 1300 30Th St
+    lat: '40.0081874124656'
+    lon: '-105.253141564786'
+    name: Smiley Ct D1
+    outdoor: false
+  - address: 1300 30Th St
+    lat: '40.0085036355198'
+    lon: '-105.25253491491'
+    name: Smiley Ct E1
+    outdoor: false
+  - address: 1300 30Th St
+    lat: '40.0087365056821'
+    lon: '-105.252098135338'
+    name: Smiley Ct B3
+    outdoor: false
+  - address: 1300 30Th St
+    lat: '40.0087637662652'
+    lon: '-105.252866102148'
+    name: Smiley Ct A2
+    outdoor: false
+  - address: 1300 30Th St
+    lat: '40.0089843090549'
+    lon: '-105.253010358157'
+    name: Smiley Ct D2
+    outdoor: false
+  - address: 1300 30Th St
+    lat: '40.0089746212241'
+    lon: '-105.252480254488'
+    name: Smiley Ct L2
+    outdoor: false
+  - address: 1300 30Th St
+    lat: '40.0093137841661'
+    lon: '-105.251826111725'
+    name: Smiley Ct D10
+    outdoor: false
+  - address: 1300 30Th St
+    lat: '40.0091794941117'
+    lon: '-105.252575703258'
+    name: Smiley Ct E2
+    outdoor: false
+  - address: 950 Regent Dr
+    lat: '40.0039396950047'
+    lon: '-105.260099817543'
+    name: East Main Grounds Building A
+    outdoor: false
+  - address: 950 Regent Dr
+    lat: '40.00395413639'
+    lon: '-105.260048187337'
+    name: East Main Grounds Building B
+    outdoor: false
+  - address: 1550 Central Campus Mall
+    lat: '40.0074564644168'
+    lon: '-105.272757728361'
+    name: Hellems Arts And Sciences Bldg
+    outdoor: false
+  - address: 1080 Broadway
+    lat: '40.0069385939878'
+    lon: '-105.273381352991'
+    name: Denison Arts And Sciences Bldg
+    outdoor: false
+  - address: 1030 Broadway
+    lat: '40.0069022872529'
+    lon: '-105.272753301243'
+    name: Henderson Bldg (Museum)
+    outdoor: false
+  - address: 1601 Central Campus Mall
+    lat: ''
+    lon: ''
+    name: Ekeley Sciences Bldg
+    outdoor: false
+  - address: 3600 Caddo Pkwy
+    lat: '39.9959978033539'
+    lon: '-105.247454137436'
+    name: University Residence
+    outdoor: false
+  - address: 3225 Apache Dr
+    lat: '39.9981488962338'
+    lon: '-105.251386119623'
+    name: Williams Village Recreation Center
+    outdoor: false
+  - address: 3355 Apache Dr
+    lat: '39.9967630365016'
+    lon: '-105.249726238009'
+    name: Bear Creek Apt B
+    outdoor: false
+  - address: 3275 Apache Dr
+    lat: '39.9973251417898'
+    lon: '-105.250689513747'
+    name: Weber Hall
+    outdoor: false
+  - address: 3200 Baseline Rd
+    lat: '39.9993929392135'
+    lon: '-105.251095501389'
+    name: Williams Vill Heating Plant
+    outdoor: false
+  - address: 1336 Grandview Ave
+    lat: '40.0111745490961'
+    lon: '-105.275266681454'
+    name: Xd Cabin
+    outdoor: false
+  - address: 1715 Pleasant St
+    lat: '40.010469861808'
+    lon: '-105.270494852179'
+    name: 'Albert And Vera Ramirez Temporary Building 1 '
+    outdoor: false
+  - address: 1111 Engineering Dr
+    lat: '40.0073631464507'
+    lon: '-105.263809030156'
+    name: Main Campus Power Distribution Ctr
+    outdoor: false
+  - address: 950 Regent Dr
+    lat: '40.0048016980695'
+    lon: '-105.260635490317'
+    name: Cu Events Center
+    outdoor: false
+  - address: 2501 Kittredge Loop Rd
+    lat: '40.0038782715082'
+    lon: '-105.262502250453'
+    name: Speech Language And Hearing Science
+    outdoor: false
+  - address: 2475 Kittredge Loop Rd
+    lat: '40.0036492290632'
+    lon: '-105.262962866618'
+    name: Sommers-Bausch Observatory
+    outdoor: false
+  - address: 2414 Regent Dr
+    lat: '40.0035680341293'
+    lon: '-105.263441027091'
+    name: Fiske Planetarium And Sci Center
+    outdoor: false
+  - address: 2445 Kittredge Loop Rd
+    lat: '40.001971047782'
+    lon: '-105.263379547528'
+    name: Fleming Building
+    outdoor: false
+  - address: 2450 Kittredge Loop Rd
+    lat: '40.0011677170144'
+    lon: '-105.262335591728'
+    name: Wolf Law Building
+    outdoor: false
+  - address: 2501 Colorado Ave
+    lat: '40.0084877403422'
+    lon: '-105.261702595254'
+    name: Lesser House
+    outdoor: false
+  - address: 2750 Colorado Ave4
+    lat: '40.0078001531942'
+    lon: '-105.259705635848'
+    name: Gas Regulator Building
+    outdoor: false
+  - address: 1050 Regent Dr
+    lat: '40.0068129410361'
+    lon: '-105.261014625302'
+    name: Police And Parking Services Ctr
+    outdoor: false
+  - address: 3210 Marine St
+    lat: '40.0134286558831'
+    lon: '-105.250872531411'
+    name: Electric Supply Bldg
+    outdoor: false
+  - address: 1300 30Th St
+    lat: '40.0091867262065'
+    lon: '-105.253170665416'
+    name: Smiley Ct D3
+    outdoor: false
+  - address: 1300 30Th St
+    lat: '40.0096738396879'
+    lon: '-105.25245628735'
+    name: Smiley Ct E3
+    outdoor: false
+  - address: 1300 30Th St
+    lat: '40.0098181123028'
+    lon: '-105.253172949365'
+    name: Smiley Ct D4
+    outdoor: false
+  - address: 1300 30Th St
+    lat: '40.0097723948641'
+    lon: '-105.252757996712'
+    name: Smiley Ct D7
+    outdoor: false
+  - address: 1300 30Th St
+    lat: '40.0099802428928'
+    lon: '-105.252417100844'
+    name: Smiley Ct D8
+    outdoor: false
+  - address: 1300 30Th St
+    lat: '40.0094347753387'
+    lon: '-105.252635850373'
+    name: Smiley Ct D6
+    outdoor: false
+  - address: 1300 30Th St
+    lat: '40.0101014966607'
+    lon: '-105.252870960261'
+    name: Smiley Ct A3
+    outdoor: false
+  - address: 3500 Marine St
+    lat: '40.013141966102'
+    lon: '-105.248568681812'
+    name: Housing And Dining Serv Fac Ops Cntr
+    outdoor: false
+  - address: 914 Broadway
+    lat: '40.0041377436524'
+    lon: '-105.268128548361'
+    name: University Admin Ctr
+    outdoor: false
+  - address: 1900 Wardenburg Dr
+    lat: '40.005227887623'
+    lon: '-105.268939980284'
+    name: Wardenburg Student Health Ctr
+    outdoor: false
+  - address: 960 Green Mtn St
+    lat: '40.005169295256'
+    lon: '-105.267822983833'
+    name: Cheyenne Arapaho Hall
+    outdoor: false
+  - address: 2055 Regent Dr
+    lat: '40.0044074468483'
+    lon: '-105.267024005089'
+    name: Regent Administrative Center
+    outdoor: false
+  - address: 2200 Willard Loop Dr
+    lat: '40.005163102603'
+    lon: '-105.26624993793'
+    name: Willard Hall
+    outdoor: false
+  - address: 2200 Baker Dr
+    lat: '40.0059889430168'
+    lon: '-105.265777088082'
+    name: Farrand Hall
+    outdoor: false
+  - address: 2320 Libby Dr
+    lat: '40.0067820663701'
+    lon: '-105.265390866615'
+    name: Aden Hall
+    outdoor: false
+  - address: 2350 Libby Dr
+    lat: '40.0071315793653'
+    lon: '-105.264949707708'
+    name: Brackett Hall
+    outdoor: false
+  - address: 2370 Libby Dr
+    lat: '40.0067826708548'
+    lon: '-105.264495097701'
+    name: Cockerell Hall
+    outdoor: false
+  - address: 1015 Cockerell Dr
+    lat: '40.00628154507'
+    lon: '-105.264757025241'
+    name: Crosman Hall
+    outdoor: false
+  - address: 1001 Cockerell Dr
+    lat: '40.0056994867443'
+    lon: '-105.264758526486'
+    name: Reed Hall
+    outdoor: false
+  - address: 2250 Willard Loop Dr
+    lat: '40.0050809607477'
+    lon: '-105.264964284532'
+    name: Hallett Hall
+    outdoor: false
+  - address: 995 Regent Dr
+    lat: '40.0058242256234'
+    lon: '-105.263459794515'
+    name: Koelbel Building - Leeds Sch Of Bus
+    outdoor: false
+  - address: 1000 Regent Dr
+    lat: '40.0061143147891'
+    lon: '-105.259795478319'
+    name: Environmental Health And Safety Cntr
+    outdoor: false
+  - address: 1157 18Th St
+    lat: '40.0087300984497'
+    lon: '-105.270745687339'
+    name: Norlin Library
+    outdoor: false
+  - address: 1445 Central Campus Mall
+    lat: '40.0078283592787'
+    lon: '-105.274531455808'
+    name: Economics Bldg
+    outdoor: false
+  - address: 1160 Broadway
+    lat: '40.0081705187776'
+    lon: '-105.274817168343'
+    name: Gates Woodruff Womens Studies Cott
+    outdoor: false
+  - address: 1475 Central Campus Mall
+    lat: '40.0081673587062'
+    lon: '-105.274226090752'
+    name: Guggenheim Geography Bldg
+    outdoor: false
+  - address: 1725 Pleasant St
+    lat: '40.0104938968482'
+    lon: '-105.270018663049'
+    name: Clare Small Arts And Sciences
+    outdoor: false
+  - address: 1234 Innovation Dr
+    lat: '40.0090451003843'
+    lon: '-105.247521912427'
+    name: Lasp Space Technology Rsch Ctr
+    outdoor: false
+  - address: 2605 Kittredge Loop Rd
+    lat: '40.0024364747265'
+    lon: '-105.260824943617'
+    name: Buckingham Hall
+    outdoor: false
+  - address: 2525 Kittredge Loop Rd
+    lat: '40.0021581405256'
+    lon: '-105.26187416228'
+    name: Smith Hall
+    outdoor: false
+  - address: 1775 Exposition Dr
+    lat: '40.0180468050357'
+    lon: '-105.247774375835'
+    name: High Performance Computing Facility
+    outdoor: false
+  - address: 1050 Regent Dr
+    lat: '40.006845044158'
+    lon: '-105.260407641183'
+    name: Regent Dr Autopark
+    outdoor: false
+  - address: 2400 Kittredge Loop Rd
+    lat: '40.0028031760465'
+    lon: '-105.264224367233'
+    name: Kittredge West Hall
+    outdoor: false
+  - address: ''
+    lat: '40.0128052569805'
+    lon: '-105.250889805584'
+    name: East Campus Grounds Building A
+    outdoor: false
+  - address: 2510 Kittredge Loop Rd
+    lat: '40.0030832820111'
+    lon: '-105.262094839421'
+    name: Andrews Hall
+    outdoor: false
+  - address: 1300 30Th St
+    lat: '40.0100253016737'
+    lon: '-105.251910879441'
+    name: Smiley Ct E4
+    outdoor: false
+  - address: 3355 Apache Drive
+    lat: '39.9959099425165'
+    lon: '-105.249539768562'
+    name: Nbb--Bear Creek Shed2
+    outdoor: false
+  - address: 1300 30Th St
+    lat: '40.0095879711603'
+    lon: '-105.252028798601'
+    name: Smiley Ct B4
+    outdoor: false
+  - address: 3645 Marine St
+    lat: '40.0140520774433'
+    lon: '-105.247202428415'
+    name: Computing Center
+    outdoor: false
+  - address: 3100 Marine St
+    lat: '40.013201415966'
+    lon: '-105.251921276366'
+    name: Admin And Rsch Ctr East Campus
+    outdoor: false
+  - address: 3601/3603 Discovery Dr
+    lat: '40.0096569073755'
+    lon: '-105.249421062762'
+    name: Bryan Benjamin Sax Ski Team Bldg
+    outdoor: false
+  - address: 1380 30Th St
+    lat: '40.0106461204062'
+    lon: '-105.252458804555'
+    name: Research Park Greenhouse
+    outdoor: false
+  - address: 1945 Colorado Ave
+    lat: '40.0086667142898'
+    lon: '-105.268247900586'
+    name: Gold Biosciences Building
+    outdoor: false
+  - address: 1905 Colorado Ave
+    lat: '40.0085245512048'
+    lon: '-105.269007258088'
+    name: Muenzinger Psych And Biopsych
+    outdoor: false
+  - address: 1805 Colorado Ave
+    lat: '40.0090249765961'
+    lon: '-105.269882813931'
+    name: Ramaley Biology Bldg
+    outdoor: false
+  - address: 3381 Marine St
+    lat: '40.0139499226434'
+    lon: '-105.249212772661'
+    name: Housing Sys Service Center
+    outdoor: false
+  - address: 3215 Marine St
+    lat: '40.0139684863237'
+    lon: '-105.250260747642'
+    name: Marine St Science Ctr (Rl-6)
+    outdoor: false
+  - address: 1480 30Th St
+    lat: '40.0117322253339'
+    lon: '-105.252967563272'
+    name: Inst For Behavioral Genetics
+    outdoor: false
+  - address: 1255 38Th St
+    lat: '40.0079849074974'
+    lon: '-105.246238539492'
+    name: Astrophysical Research Laboratory
+    outdoor: false
+  - address: 1777 Exposition Dr
+    lat: '40.0177418632225'
+    lon: '-105.24702924484'
+    name: Center For Innovation And Creativity
+    outdoor: false
+  - address: 818 County Rd 116
+    lat: '40.0302597014014'
+    lon: '-105.537763358462'
+    name: Tularoosa
+    outdoor: false
+  - address: 3595 Discovery Dr
+    lat: '40.0098758172501'
+    lon: '-105.249454307222'
+    name: Soccer Locker Room
+    outdoor: false
+  - address: 2400 Colorado Ave, Boulder, CO 80305
+    lat: 40.0086257
+    lon: -105.2671921
+    name: Folsom Field
+    outdoor: true
+  - address: at Wardenburg Dr & Baker Dr, Boulder, CO 80305
+    lat: 40.005989
+    lon: -105.267283
+    name: Farrand Field
+    outdoor: true
+  - lat: 40.006790
+    lon: -105.264900
+    name: Engineering Quad
+    outdoor: true
+  - name: Engebretson's Quad
+    lat: 40.005872
+    lon: -105.264215
+    outdoor: true
+  - name: Kittredge Field
+    lat: 40.002831
+    lon: -105.259568
+    outdoor: true
+  - name: Norlin Quad
+    lat: 40.008650
+    lon: -105.273215
+    outdoor: true
+  - name: Prentup Field
+    lat: 40.010129
+    lon: -105.250620
+    outdoor: true
+  - name: Potts Field
+    lat: 40.010560
+    lon: -105.248640
+    outdoor: true
