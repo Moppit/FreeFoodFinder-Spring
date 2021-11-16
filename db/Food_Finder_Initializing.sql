@@ -44,7 +44,7 @@ CREATE UNIQUE INDEX `restrictionID_UNIQUE` ON `FreeFoodFinderDB`.`dietary_restri
 DROP TABLE IF EXISTS `FreeFoodFinderDB`.`location` ;
 
 CREATE TABLE IF NOT EXISTS `FreeFoodFinderDB`.`location` (
-  `locationID` INT NOT NULL,
+  `locationID` INT NOT NULL AUTO_INCREMENT,
   `location_name` VARCHAR(45) NOT NULL,
   `latitude` DECIMAL(10,5) NOT NULL,
   `longitude` DECIMAL(10,5) NOT NULL,
