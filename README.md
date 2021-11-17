@@ -37,6 +37,11 @@ For our specific server:
    3. Note for posterity: after your first run (which needs to create the hiberate table), you should change the `ddl-auto` attribute back to `none` if you don't intend for any more structural changes to the database.
 4. Now you should be able to run the project (using `./mvnw spring-boot:run` as described above) and curl `localhost` to retrieve data.
 
+### Creating the locations for the database
+Locations will be generated from the `locations.yaml` file. The created `location_inserts.sql` can be used to insert the rows into the db.
+1. `cd db`
+2. `python3 generate_location_inserts.py`
+
 ## Endpoints
 
 ### /fff/events
