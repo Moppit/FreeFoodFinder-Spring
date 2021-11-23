@@ -20,15 +20,9 @@ public class DietaryRestriction {
     private Boolean noEgg;
     private Boolean noSoy;
 
-    // Foreign Key
-    @JsonBackReference
-    @OneToMany(mappedBy="restrictionID")
-    private Set<Event> events;
-
     // Constructors
     public DietaryRestriction() {}
-    public DietaryRestriction(Integer restrictionID, Boolean glutenFree, Boolean vegan, Boolean vegetarian, Boolean noPeanut, Boolean lactoseFree, Boolean kosher, Boolean noEgg, Boolean noSoy, Set<Event> events) {
-        this.restrictionID = restrictionID;
+    public DietaryRestriction(Boolean glutenFree, Boolean vegan, Boolean vegetarian, Boolean noPeanut, Boolean lactoseFree, Boolean kosher, Boolean noEgg, Boolean noSoy) {
         this.glutenFree = glutenFree;
         this.vegan = vegan;
         this.vegetarian = vegetarian;
@@ -37,7 +31,6 @@ public class DietaryRestriction {
         this.kosher = kosher;
         this.noEgg = noEgg;
         this.noSoy = noSoy;
-        this.events = events;
     }
 
     // Getters & Setters
@@ -113,12 +106,15 @@ public class DietaryRestriction {
         this.noSoy = noSoy;
     }
 
-    public Set<Event> getEvents() {
-        return events;
-    }
-
-    public void setEvents(Set<Event> events) {
-        this.events = events;
+    public static DietaryRestriction fromCreateEventRequest(CreateEventRequest req) {
+        return new DietaryRestriction(req.isGlutenFree(),
+                req.isVegan(),
+                req.isVegetarian(),
+                req.isNoPeanuts(),
+                req.isLactoseFree(),
+                req.isKosher(),
+                req.isNoEggs(),
+                req.isNoSoy());
     }
 
 }
