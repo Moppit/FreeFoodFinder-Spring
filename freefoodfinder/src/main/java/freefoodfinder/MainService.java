@@ -30,9 +30,9 @@ public class MainService {
 
         if (location.isPresent()) {
             DietaryRestriction dietaryRestriction = DietaryRestriction.fromCreateEventRequest(req);
-            DietaryRestriction d = dietaryRestrictionRepository.save(dietaryRestriction);
 
-            Event event = Event.fromCreateEventReq(req, d, location.get());
+            Event event = Event.fromCreateEventReq(req, dietaryRestriction, location.get());
+
 
             return new SingleEventResponse(eventRepository.save(event));
         }

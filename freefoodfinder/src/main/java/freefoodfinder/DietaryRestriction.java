@@ -5,6 +5,7 @@ import com.fasterxml.jackson.annotation.JsonBackReference;
 import javax.persistence.*;
 
 @Entity
+@Table(name="dietary_restriction")
 public class DietaryRestriction {
 
     // Table Columns
@@ -20,9 +21,13 @@ public class DietaryRestriction {
     private Boolean noEgg;
     private Boolean noSoy;
 
+    @JsonBackReference
+    @OneToOne(mappedBy = "restrictionID", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    private Event event;
+
     // Constructors
     public DietaryRestriction() {}
-    public DietaryRestriction(Boolean glutenFree, Boolean vegan, Boolean vegetarian, Boolean noPeanut, Boolean lactoseFree, Boolean kosher, Boolean noEgg, Boolean noSoy) {
+    public DietaryRestriction(Boolean glutenFree, Boolean vegan, Boolean vegetarian, Boolean noPeanut, Boolean lactoseFree, Boolean kosher, Boolean noEgg, Boolean noSoy, Event event) {
         this.glutenFree = glutenFree;
         this.vegan = vegan;
         this.vegetarian = vegetarian;
@@ -31,6 +36,7 @@ public class DietaryRestriction {
         this.kosher = kosher;
         this.noEgg = noEgg;
         this.noSoy = noSoy;
+        this.event = event;
     }
 
     // Getters & Setters
@@ -106,15 +112,25 @@ public class DietaryRestriction {
         this.noSoy = noSoy;
     }
 
+    public Event getEvent() {
+        return event;
+    }
+
+    public void setEvent(Event event) {
+        this.event = event;
+    }
+
     public static DietaryRestriction fromCreateEventRequest(CreateEventRequest req) {
-        return new DietaryRestriction(req.isGlutenFree(),
-                req.isVegan(),
-                req.isVegetarian(),
-                req.isNoPeanuts(),
-                req.isLactoseFree(),
-                req.isKosher(),
-                req.isNoEggs(),
-                req.isNoSoy());
+        DietaryRestriction d = new DietaryRestriction();
+        d.setGlutenFree(req.isGlutenFree());
+        d.setVegan(req.isVegan());
+        d.setVegetarian(req.isVegetarian());
+        d.setNoPeanut(req.isNoPeanuts());
+        d.setLactoseFree(req.isLactoseFree());
+        d.setKosher(req.isKosher());
+        d.setNoEgg(req.isNoEggs());
+        d.setNoSoy(req.isNoSoy());
+        return d;
     }
 
 }

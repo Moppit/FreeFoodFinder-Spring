@@ -18,9 +18,8 @@ public class Event {
     private String foodDescription;
     private String roomNumber;
 
-    // Foreign Keys
-    @JsonBackReference
-    @OneToOne
+    @JsonManagedReference
+    @OneToOne(optional = false, cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JoinColumn(name="restrictionID", nullable = false)
     private DietaryRestriction restrictionID;
 
