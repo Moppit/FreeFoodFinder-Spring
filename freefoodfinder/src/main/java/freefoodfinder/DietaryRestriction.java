@@ -5,6 +5,7 @@ import com.fasterxml.jackson.annotation.JsonBackReference;
 import javax.persistence.*;
 
 @Entity
+@Table(name="dietary_restriction")
 public class DietaryRestriction {
 
     // Table Columns
@@ -20,15 +21,13 @@ public class DietaryRestriction {
     private Boolean noEgg;
     private Boolean noSoy;
 
-    // Foreign Key
     @JsonBackReference
-    @OneToMany(mappedBy="restrictionID")
-    private Set<Event> events;
+    @OneToOne(mappedBy = "restrictionID", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    private Event event;
 
     // Constructors
     public DietaryRestriction() {}
-    public DietaryRestriction(Integer restrictionID, Boolean glutenFree, Boolean vegan, Boolean vegetarian, Boolean noPeanut, Boolean lactoseFree, Boolean kosher, Boolean noEgg, Boolean noSoy, Set<Event> events) {
-        this.restrictionID = restrictionID;
+    public DietaryRestriction(Boolean glutenFree, Boolean vegan, Boolean vegetarian, Boolean noPeanut, Boolean lactoseFree, Boolean kosher, Boolean noEgg, Boolean noSoy, Event event) {
         this.glutenFree = glutenFree;
         this.vegan = vegan;
         this.vegetarian = vegetarian;
@@ -37,7 +36,7 @@ public class DietaryRestriction {
         this.kosher = kosher;
         this.noEgg = noEgg;
         this.noSoy = noSoy;
-        this.events = events;
+        this.event = event;
     }
 
     // Getters & Setters
@@ -113,12 +112,25 @@ public class DietaryRestriction {
         this.noSoy = noSoy;
     }
 
-    public Set<Event> getEvents() {
-        return events;
+    public Event getEvent() {
+        return event;
     }
 
-    public void setEvents(Set<Event> events) {
-        this.events = events;
+    public void setEvent(Event event) {
+        this.event = event;
+    }
+
+    public static DietaryRestriction fromCreateEventRequest(CreateEventRequest req) {
+        DietaryRestriction d = new DietaryRestriction();
+        d.setGlutenFree(req.isGlutenFree());
+        d.setVegan(req.isVegan());
+        d.setVegetarian(req.isVegetarian());
+        d.setNoPeanut(req.isNoPeanuts());
+        d.setLactoseFree(req.isLactoseFree());
+        d.setKosher(req.isKosher());
+        d.setNoEgg(req.isNoEggs());
+        d.setNoSoy(req.isNoSoy());
+        return d;
     }
 
 }

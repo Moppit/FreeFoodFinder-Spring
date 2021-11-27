@@ -1,6 +1,8 @@
 package freefoodfinder;
 
 import java.sql.Timestamp;
+
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import javax.persistence.*;
 
@@ -16,9 +18,8 @@ public class Event {
     private String foodDescription;
     private String roomNumber;
 
-    // Foreign Keys
     @JsonManagedReference
-    @ManyToOne
+    @OneToOne(optional = false, cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JoinColumn(name="restrictionID", nullable = false)
     private DietaryRestriction restrictionID;
 
@@ -29,8 +30,7 @@ public class Event {
 
     // Constructors
     public Event() {}
-    public Event(Integer eventID, String foodName, Timestamp availableUntil, String foodDescription, String roomNumber, DietaryRestriction restrictionID, Location locationID) {
-        this.eventID = eventID;
+    public Event(String foodName, Timestamp availableUntil, String foodDescription, String roomNumber, DietaryRestriction restrictionID, Location locationID) {
         this.foodName = foodName;
         this.availableUntil = availableUntil;
         this.foodDescription = foodDescription;
@@ -94,6 +94,16 @@ public class Event {
 
     public void setLocationID(Location locationID) {
         this.locationID = locationID;
+    }
+
+    public static Event fromCreateEventReq(CreateEventRequest req, DietaryRestriction d, Location l) {
+        return new Event(
+                req.getName(),
+                req.getAvailableUntil(),
+                req.getDesc(),
+                req.getRoom(),
+                d,
+                l);
     }
 
 }
