@@ -1,15 +1,18 @@
 package freefoodfinder;
 
+import java.util.Date;
+import java.sql.Timestamp;
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import java.util.Optional;
 
 @Service
 public class MainService {
 
     @Autowired
     private EventRepository eventRepository;
+
     @Autowired
     private LocationRepository locationRepository;
 
@@ -17,7 +20,9 @@ public class MainService {
     private DietaryRestrictionRepository dietaryRestrictionRepository;
 
     public EventResponse getAllEvents() {
-        return new EventResponse(eventRepository.findAll());
+        Date date = new Date();
+        Iterable<Event> events = eventRepository.findByAvailableUntilAfter(new Timestamp(date.getTime()));
+        return new EventResponse(events);
     }
 
     public LocationResponse getLocations() {
