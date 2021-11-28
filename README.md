@@ -44,19 +44,23 @@ Locations will be generated from the `locations.yaml` file. The created `locatio
 
 ## Endpoints
 
-### /fff/events
+### GET /fff/events
 This retrieves all free food events from the database, for cases where no filtering criteria has been specified.
 
-`@param` None
+`@param` **search** (optional): search terms entered by the user to be searched using the food description field
+
+`@param` **location** (optional): integer location ID of desired location
+
+`@param` **filters** (optional): list of filter strings of form: `GLUTEN_FREE,LACTOSE_FREE,VEGAN,KOSHER,VEGETARIAN,NO_EGGS,NO_PEANUTS,NO_SOY`, where only desired filters are listed.
 
 `@return` List of Event Objects
 
-Example Query
+Example Query: Get all events
 ```bash
 curl 'localhost:8080/fff/events'
 ```
 
-Example output (assuming only 1 events in the database):
+Example output (assuming only 1 event in the database):
 ```json
 {
   "events": [{
@@ -81,13 +85,55 @@ Example output (assuming only 1 events in the database):
       "locationName":"Engineering Center",
       "latitude":20.5,
       "longitude":30.2,
+      "address":"1111 Engineering Drive",
       "isOutdoor":false
     }
   }]
 }
 ```
 
-### /fff/locations
+Example Query: Get filtered events
+```bash
+curl 'localhost:8080/fff/events?search=pizza&location=85&filters=NO_EGGS'
+```
+
+Example output:
+```json
+{
+   "events": [
+      {
+         "eventID":53,
+         "foodName":"Veggie Pizza",
+         "availableUntil":"2021-11-30T22:15:00.000+00:00",
+         "foodDescription":"5 slices of olive and mushroom veggie pizza. ",
+         "roomNumber":"Lobby",
+         "restrictionID":
+         {
+            "restrictionID":54,
+            "glutenFree":false,
+            "vegan":false,
+            "vegetarian":true,
+            "noPeanut":true,
+            "lactoseFree":false,
+            "kosher":false,
+            "noEgg":true,
+            "noSoy":true
+         },
+         "locationID":
+         {
+            "locationID":85,
+            "locationName":"Andrews Hall",
+            "latitude":40.00308,
+            "longitude":-105.26209,
+            "address":"2510 Kittredge Loop Rd",
+            "isOutdoor":false
+         }
+      }
+   ]
+}
+```
+
+### GET /fff/locations
 This retrieves all locations from the database.
 
 `@param` None
@@ -129,4 +175,33 @@ Example output (assuming only 3 locations in the database):
       }
    ]
 }
+```
+
+### POST /fff/events
+Adds an event to the database.
+
+Example Request Body:
+```json
+{
+  "name": "Apples and Peanut Butter",
+  "desc": "this is leftover food from the OOAD yearly Gala",
+  "availableUntil": "2021-11-17T23:28:00.000Z",
+  "locationId": 3,
+  "room": "E1004",
+  "glutenFree": true,
+  "kosher": true,
+  "lactoseFree": false,
+  "noEggs": false,
+  "noPeanuts": false,
+  "noSoy": true,
+  "vegan": false,
+  "vegetarian": true
+} 
+```
+
+Example Query
+```bash
+curl -X POST -H "Content-Type: application/json" \
+    -d '{ "name": "Apples and Peanut Butter", "desc": "this is leftover food from the OOAD yearly Gala", "availableUntil": "2021-11-30T23:28:00.000Z", "locationId": 3, "room": "E1004", "glutenFree": true, "kosher": true, "lactoseFree": false, "noEggs": false, "noPeanuts": false, "noSoy": true, "vegan": false, "vegetarian": true}' \
+    http://localhost:8080/fff/events
 ```

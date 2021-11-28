@@ -26,7 +26,17 @@ public class DietaryRestriction {
     private Event event;
 
     // Constructors
-    public DietaryRestriction() {}
+    public DietaryRestriction() {
+        this.glutenFree = false;
+        this.vegan = false;
+        this.vegetarian = false;
+        this.noPeanut = false;
+        this.lactoseFree = false;
+        this.kosher = false;
+        this.noEgg = false;
+        this.noSoy = false;
+    }
+
     public DietaryRestriction(Boolean glutenFree, Boolean vegan, Boolean vegetarian, Boolean noPeanut, Boolean lactoseFree, Boolean kosher, Boolean noEgg, Boolean noSoy, Event event) {
         this.glutenFree = glutenFree;
         this.vegan = vegan;
@@ -131,6 +141,28 @@ public class DietaryRestriction {
         d.setNoEgg(req.isNoEggs());
         d.setNoSoy(req.isNoSoy());
         return d;
+    }
+
+    /**
+     * Verifies that an event's dietary restrictions have _at least_ the specified filters.
+     * NOTE: that doesn't mean the filters match, just that the event has said filters.
+     * i.e. a query for VEGAN food should return true for an event with VEGAN=true and NO_EGGS=true
+     * @param filters: list of filters as strings
+     * @return: true if this DietaryRestriction object has the desired filters set to true
+     */
+    public boolean hasFilters(Iterable<String> filters) {
+        // Filter format: GLUTEN_FREE,LACTOSE_FREE,VEGAN,KOSHER,VEGETARIAN,NO_EGGS,NO_PEANUTS,NO_SOY
+        for(String i : filters) {
+            if("GLUTEN_FREE".equals(i)) { if(!getGlutenFree()) { return false; } }
+            if("LACTOSE_FREE".equals(i)) { if(!getLactoseFree()) { return false; } }
+            if("VEGAN".equals(i)) { if(!getVegan()) { return false; } }
+            if("KOSHER".equals(i)) { if(!getKosher()) { return false; } }
+            if("VEGETARIAN".equals(i)) { if(!getVegetarian()) { return false; } }
+            if("NO_EGGS".equals(i)) { if(!getNoEgg()) { return false; } }
+            if("NO_PEANUTS".equals(i)) { if(!getNoPeanut()) { return false; } }
+            if("NO_SOY".equals(i)) { if(!getNoSoy()) { return false; } }
+        }
+        return true;
     }
 
 }
