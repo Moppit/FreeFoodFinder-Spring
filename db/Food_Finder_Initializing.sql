@@ -67,6 +67,7 @@ CREATE TABLE IF NOT EXISTS `FreeFoodFinderDB`.`event` (
   `room_number` VARCHAR(45) NULL,
   `restrictionID` INT NOT NULL,
   `locationID` INT NOT NULL,
+  `report_count` INT NOT NULL,
   PRIMARY KEY (`eventID`),
   CONSTRAINT `fk_event_dietary_restriction`
     FOREIGN KEY (`restrictionID`)
