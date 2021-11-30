@@ -4,6 +4,9 @@ import java.sql.Timestamp;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
+import net.bytebuddy.implementation.bind.annotation.Default;
+import org.springframework.beans.factory.annotation.Value;
+
 import javax.persistence.*;
 
 @Entity
@@ -17,6 +20,7 @@ public class Event {
     private Timestamp availableUntil;
     private String foodDescription;
     private String roomNumber;
+    private Integer reports = 0;
 
     @JsonManagedReference
     @OneToOne(optional = false, cascade = CascadeType.ALL, fetch = FetchType.EAGER)
@@ -37,6 +41,7 @@ public class Event {
         this.roomNumber = roomNumber;
         this.restrictionID = restrictionID;
         this.locationID = locationID;
+        this.reports = 0;
     }
 
     // Getters & Setters
@@ -105,5 +110,14 @@ public class Event {
                 d,
                 l);
     }
+
+    public Integer getReports() {
+        return reports;
+    }
+
+    public void setReports(Integer reports) {
+        this.reports = reports;
+    }
+
 
 }
