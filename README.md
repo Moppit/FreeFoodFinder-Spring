@@ -186,7 +186,7 @@ Example Request Body:
   "name": "Apples and Peanut Butter",
   "desc": "this is leftover food from the OOAD yearly Gala",
   "availableUntil": "2021-11-17T23:28:00.000Z",
-  "locationId": 3,
+  "locationID": 3,
   "room": "E1004",
   "glutenFree": true,
   "kosher": true,
@@ -202,6 +202,6 @@ Example Request Body:
 Example Query
 ```bash
 curl -X POST -H "Content-Type: application/json" \
-    -d '{ "name": "Apples and Peanut Butter", "desc": "this is leftover food from the OOAD yearly Gala", "availableUntil": "2021-11-30T23:28:00.000Z", "locationId": 3, "room": "E1004", "glutenFree": true, "kosher": true, "lactoseFree": false, "noEggs": false, "noPeanuts": false, "noSoy": true, "vegan": false, "vegetarian": true}' \
+    -d '{ "name": "Apples and Peanut Butter", "desc": "this is leftover food from the OOAD yearly Gala", "availableUntil": "2021-11-30T23:28:00.000Z", "locationID": 3, "room": "E1004", "glutenFree": true, "kosher": true, "lactoseFree": false, "noEggs": false, "noPeanuts": false, "noSoy": true, "vegan": false, "vegetarian": true}' \
     http://localhost:8080/fff/events
 ```
