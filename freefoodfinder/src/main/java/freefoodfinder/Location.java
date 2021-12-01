@@ -17,7 +17,7 @@ public class Location {
     private String address;
     private Boolean isOutdoor;
 
-    // Foreign Key
+    // Foreign Key [1] [2] [3]
     @JsonBackReference
     @OneToMany(mappedBy="locationID")
     private Set<Event> events;
@@ -92,3 +92,9 @@ public class Location {
     }
 
 }
+
+/******** References/Citations ********
+ [1] Foreign Keys in Spring: https://examples.javacodegeeks.com/enterprise-java/hibernate/hibernate-foreign-key-example/
+ [2] One to Many relationships in Spring: https://www.baeldung.com/hibernate-one-to-many
+ [3] Prevent infinite references: https://stackoverflow.com/questions/30892298/infinite-loop-with-spring-boot-in-a-one-to-many-relation
+ */
