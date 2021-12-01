@@ -202,7 +202,7 @@ Example Request Body
 Example Query
 ```bash
 curl -X POST -H "Content-Type: application/json" \
-    -d '{ "name": "Apples and Peanut Butter", "desc": "this is leftover food from the OOAD yearly Gala", "availableUntil": "2021-11-30T23:28:00.000Z", "locationID": 3, "room": "E1004", "glutenFree": true, "kosher": true, "lactoseFree": false, "noEggs": false, "noPeanuts": false, "noSoy": true, "vegan": false, "vegetarian": true}' \
+    -d '{ "name": "Apples and Peanut Butter", "desc": "this is leftover food from the OOAD yearly Gala", "availableUntil": "2021-12-15T23:28:00.000Z", "locationID": 3, "room": "E1004", "glutenFree": true, "kosher": true, "lactoseFree": false, "noEggs": false, "noPeanuts": false, "noSoy": true, "vegan": false, "vegetarian": true}' \
     http://localhost:8080/fff/events
 ```
 
@@ -240,3 +240,16 @@ Example Response
   }
 }
 ```
+
+### PUT /fff/events/{id}/reports
+Allows users to increment the number of times an event has been reported for not having food available despite being displayed (i.e. the event hasn't expired but has run out of food).
+
+`@param` **id**: Food event ID of event to report
+
+`@return` None
+
+Example Query (for food event with ID = 55)
+```bash
+curl -X PUT http://localhost:8080/fff/events/55/reports
+```
+

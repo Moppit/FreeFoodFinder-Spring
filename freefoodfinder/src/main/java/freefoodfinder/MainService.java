@@ -93,6 +93,11 @@ public class MainService {
         return null;
     }
 
+    /**
+     * Increment the number of times an event has been reported.
+     * @param id: EventID of event to increment
+     * @return: None
+     */
     public void reportEvent(Integer id) {
         Optional<Event> e = eventRepository.findById(id);
         if(e.isPresent()){
