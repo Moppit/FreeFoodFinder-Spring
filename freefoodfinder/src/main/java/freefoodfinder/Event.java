@@ -14,11 +14,12 @@ public class Event {
     @GeneratedValue(strategy=GenerationType.AUTO)
     private Integer eventID;
     private String foodName;
-    private Timestamp availableUntil;
+    private Timestamp availableUntil; // [2]
     private String foodDescription;
     private String roomNumber;
     private Integer reports = 0;
 
+    // Foreign Keys [1]
     @JsonManagedReference
     @OneToOne(optional = false, cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JoinColumn(name="restrictionID", nullable = false)
@@ -118,3 +119,8 @@ public class Event {
 
 
 }
+
+/******** References/Citations ********
+ [1] Foreign Keys in Spring: https://examples.javacodegeeks.com/enterprise-java/hibernate/hibernate-foreign-key-example/
+ [2] Datetime in SQL: https://stackoverflow.com/questions/6777810/a-datetime-equivalent-in-java-sql-is-there-a-java-sql-datetime
+ */
