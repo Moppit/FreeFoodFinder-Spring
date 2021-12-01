@@ -1,6 +1,5 @@
 package freefoodfinder;
 
-import java.util.Set;
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import javax.persistence.*;
 
@@ -21,6 +20,7 @@ public class DietaryRestriction {
     private Boolean noEgg;
     private Boolean noSoy;
 
+    // Foreign Key [1] [2]
     @JsonBackReference
     @OneToOne(mappedBy = "restrictionID", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private Event event;
@@ -166,3 +166,7 @@ public class DietaryRestriction {
     }
 
 }
+/******** References/Citations ********
+ [1] Foreign Keys in Spring: https://examples.javacodegeeks.com/enterprise-java/hibernate/hibernate-foreign-key-example/
+ [2] Prevent infinite references: https://stackoverflow.com/questions/30892298/infinite-loop-with-spring-boot-in-a-one-to-many-relation
+ */

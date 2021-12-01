@@ -180,7 +180,7 @@ Example output (assuming only 3 locations in the database):
 ### POST /fff/events
 Adds an event to the database.
 
-Example Request Body:
+Example Request Body
 ```json
 {
   "name": "Apples and Peanut Butter",
@@ -204,4 +204,39 @@ Example Query
 curl -X POST -H "Content-Type: application/json" \
     -d '{ "name": "Apples and Peanut Butter", "desc": "this is leftover food from the OOAD yearly Gala", "availableUntil": "2021-11-30T23:28:00.000Z", "locationID": 3, "room": "E1004", "glutenFree": true, "kosher": true, "lactoseFree": false, "noEggs": false, "noPeanuts": false, "noSoy": true, "vegan": false, "vegetarian": true}' \
     http://localhost:8080/fff/events
+```
+
+Example Response
+```json
+{
+  "event": 
+  {
+     "eventID":59,
+     "foodName":"Apples and Peanut Butter",
+     "availableUntil":"2021-11-30T23:28:00.000+00:00",
+     "foodDescription":"this is leftover food from the OOAD yearly Gala",
+     "roomNumber":"E1004",
+     "restrictionID":
+     {
+        "restrictionID":60,
+        "glutenFree":true,
+        "vegan":false,
+        "vegetarian":true,
+        "noPeanut":false,
+        "lactoseFree":false,
+        "kosher":true,
+        "noEgg":false,
+        "noSoy":true
+     },
+     "locationID": 
+     {
+        "locationID":3,
+        "locationName":"Outside of Math Building",
+        "latitude":20.0,
+        "longitude":30.0,
+        "address":null,
+        "isOutdoor":true
+     }
+  }
+}
 ```

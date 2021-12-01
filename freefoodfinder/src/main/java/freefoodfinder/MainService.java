@@ -19,7 +19,7 @@ public class MainService {
     private DietaryRestrictionRepository dietaryRestrictionRepository;
 
     /**
-     * Retrieves non-expired events from database. If all params are null, it returns all events.
+     * Retrieves non-expired events from database. If all params are null, it returns all events. [1]
      * @param searchTerm (optional): search terms entered by user to search for matching food descriptions
      * @param locationID (optional): database key for the desired location
      * @param strFilters (optional): desired filters in the form of an un-parsed string
@@ -92,3 +92,7 @@ public class MainService {
     }
 
 }
+
+/******** References/Citations ********
+ [1] Dealing with null request params: https://zetcode.com/springboot/requestparam/
+ */
