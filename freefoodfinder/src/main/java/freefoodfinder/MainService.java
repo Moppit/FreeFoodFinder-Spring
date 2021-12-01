@@ -18,6 +18,8 @@ public class MainService {
     @Autowired
     private DietaryRestrictionRepository dietaryRestrictionRepository;
 
+    public EventResponse getAllEvents() {return new EventResponse(eventRepository.findAll());}
+
     /**
      * Retrieves non-expired events from database. If all params are null, it returns all events. [1]
      * @param searchTerm (optional): search terms entered by user to search for matching food descriptions
@@ -60,6 +62,7 @@ public class MainService {
         return new EventResponse(events);
     }
 
+
     // TODO: add a delete function
 
     /**
@@ -84,11 +87,24 @@ public class MainService {
 
             Event event = Event.fromCreateEventReq(req, dietaryRestriction, location.get());
 
-
             return new SingleEventResponse(eventRepository.save(event));
         }
 
         return null;
+    }
+
+    /**
+     * Increment the number of times an event has been reported.
+     * @param id: EventID of event to increment
+     * @return: None
+     */
+    public void reportEvent(Integer id) {
+        Optional<Event> e = eventRepository.findById(id);
+        if(e.isPresent()){
+            Event event = e.get();
+            event.setReports(event.getReports() + 1);
+            eventRepository.save(event);
+        }
     }
 
 }
