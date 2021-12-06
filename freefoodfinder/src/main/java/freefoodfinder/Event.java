@@ -99,6 +99,14 @@ public class Event {
         this.locationID = locationID;
     }
 
+    public Integer getReports() {
+        return reports;
+    }
+
+    public void setReports(Integer reports) {
+        this.reports = reports;
+    }
+
     public static Event fromCreateEventReq(CreateEventRequest req, DietaryRestriction d, Location l) {
         return new Event(
                 req.getName(),
@@ -108,15 +116,6 @@ public class Event {
                 d,
                 l);
     }
-
-    public Integer getReports() {
-        return reports;
-    }
-
-    public void setReports(Integer reports) {
-        this.reports = reports;
-    }
-
 
 }
 
