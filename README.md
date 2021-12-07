@@ -1,11 +1,24 @@
 # FreeFoodFinder-Spring
 
+Our code is separated into 2 repositories for ease of development. This project contains the Spring half (backend). To access the Angular side of the project, visit https://github.com/Moppit/FreeFoodFinder-Angular. **NOTE**: this project contains the bulk of general documentation and deliverables, so please read through this repo's contents first before proceeding to the Angular repo. 
+
+## Team
+- Yifan (Catherine) Chen
+- Jett Crowson
+- Michelle Tran
+
+## Language Version
+This Spring project was generated with Java 11 and the MySQL database was generated using MySQL v.8.0.27.
+
 ## Deliverables
 
-### Project 6
-Our written deliverables is saved in this repo as `Project 6 Update.pdf` in the root directory.
+### Project 7
+Our written deliverables for Project 7 is saved in this repo as `Project 7 Deliverable.pdf`. Since the size of our video was too large to upload to Github, here is the link: https://drive.google.com/file/d/1S_JL2BjmtTt03wBjhEt1iHid_SXVi2hs/view?usp=sharing
 
-Our code is separated into 2 repositories for ease of development. This project contains the Spring half. To access the Angular side of the project, visit https://github.com/Moppit/FreeFoodFinder-Angular. 
+Apologies in advance for the sound quality on some parts -- we recorded via Zoom. The video should be viewable from your @colorado.edu Gmail account. If you cannot access the video, please let us know.
+
+### Project 6
+Our written deliverables for Project 6 is saved in this repo as `Project 6 Update.pdf` in the root directory.
 
 ## Run the Project
 You must run the project as a Maven project. In the `freefoodfinder` directory, run the command:
